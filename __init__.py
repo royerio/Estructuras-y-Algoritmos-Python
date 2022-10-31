@@ -7,5 +7,5 @@ Creado el 12 de octubre del 2022
 # Hola mundo en Python
 #-------------------------------------------------------
 
-print("Hola Mundo ahora en Python3 !")
+print("Hola Mundo ahora en Python3!")
 #%%
