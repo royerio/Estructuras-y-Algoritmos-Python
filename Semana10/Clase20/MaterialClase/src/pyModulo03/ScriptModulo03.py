@@ -4,6 +4,7 @@ Created on Jan 23, 2021
 @author: freddy
 '''
 ## @knitr Item1
+#%%
 
 # FUNCIONES:
 
@@ -23,6 +24,7 @@ res = suma(30,12)
 print(res)
 
 ## @knitr Item2
+#%%
 
 # Definición de la función imprime_informacion.
 
@@ -34,19 +36,21 @@ imprime_informacion('jose')
 imprime_informacion('eduardo')
 
 ## @knitr Item3
+#%%
 # Definición de una función con parámetros estatícos. No tienen valor por omision y deben aporarse ambos siempre.
-def area_triangulo_estica(base,altura):
+def area_triangulo_estatica(base,altura):
   area = (base*altura)/2
   return(area)
 
 # Invocación
-area_triangulo_estica(3,4)
+print(area_triangulo_estatica(3,4))
 
-area_triangulo_estica(base=10, altura=15)
+print(area_triangulo_estatica(base=10, altura=15))
 
-area_triangulo_estica(altura=15, base=10)
+print(area_triangulo_estatica(altura=15, base=10))
 
 ## @knitr Item4
+#%%
 # Valores por defecto en parámetros
 
 def area_triangulo(base=1,altura=1):
@@ -54,17 +58,18 @@ def area_triangulo(base=1,altura=1):
   return(area)
 
 # Invocación
-area_triangulo(30,15)
+print(area_triangulo(30,15))
 
 # Usa los valores por defecto
-area_triangulo(30)
+print(area_triangulo(30))
 print("++++++++++++++++\n")
 
-area_triangulo()
+print(area_triangulo())
 print("++++++++++++++++\n")
 
 
 ## @knitr Item5
+#%%
 # Retornando conjuntos con valores
 # Retornando un diccionario (Similar a R que se retorna una lista)
 def nombre_completo_(nombre, apellido):
@@ -87,6 +92,7 @@ usuario = nombre_completo('Juan Mora', 'Fernández',edad=50)
 print(usuario)
 
 ## @knitr Item6
+#%%
 def conformacion_lista_impares(datos_impares=0):
   lista=[]
   for i in range(0,datos_impares+1):
@@ -98,6 +104,7 @@ lista_impares=conformacion_lista_impares(151)
 print(lista_impares)
 
 ## @knitr Item7
+#%%
 
 # Ejemplo con if: El mayor entre 3 números
 def mayor(A, B, C):
@@ -111,6 +118,7 @@ def mayor(A, B, C):
 mayor(9,0,2)
 
 ## @knitr Item8
+#%%
 # Ejemplo con for
 # construye un vector “v” 
 # tal que en la entrada k sea una serie dada porr k^2−4.
@@ -128,6 +136,7 @@ cvector_f(9)
 cvector_f(35)
 
 ## @knitr Item9
+#%%
 # Otro Ejemplo con for: Norma de un vector
 def norma1(v):
   suma = 0
@@ -136,13 +145,14 @@ def norma1(v):
   return suma
 
 vec0=(4,-7,2,1)
-norma1(vec0)
+print(norma1(vec0))
 
 v=(-1, 20, 38, -4, 51, -6, -7, 82, 91, 20)
-norma1(v)
+print(norma1(v))
 
 
 ## @knitr Item10
+#%%
 # Ejemplo
 # La siguiente función multiplica una matriz por un vector.
 # Se calcula y=Ax
@@ -171,6 +181,7 @@ y = mat_x_vec(A,x)
 print(y)
 
 ## @knitr Item11
+#%%
 
 # Ejemplo
 # La siguiente función multiplica una matriz por un vector.
@@ -192,6 +203,7 @@ def mat_x_vec2(A,x):
       y[i] = y[i] + A[i,j]*x[j]
   return(y)
 ## @knitr Item12
+#%%
 
 #Construcción de solución
 # Matriz
@@ -211,21 +223,26 @@ y = mat_x_vec2(A,x)
 print(y)
 
 ## @knitr Item13
+#%%
 
-def ordenamientoBurbuja(unaLista):
+def ordenamientoBurbuja(unaListaOriginal):
+    unaLista=unaListaOriginal.copy()
     for numPasada in range(len(unaLista)-1,0,-1):
         for i in range(numPasada):
             if unaLista[i]>unaLista[i+1]:
                 temp = unaLista[i]
                 unaLista[i] = unaLista[i+1]
                 unaLista[i+1] = temp
+    return unaLista
 
 ## @knitr Item14
+#%%
 unaLista = [54,26,93,17,77,31,44,55,20]
-ordenamientoBurbuja(unaLista)
+unaListaOrdenada=ordenamientoBurbuja(unaLista)
 print(unaLista)
 
 ## @knitr Item15
+#%%
 
 # Definición de funciones para ordenamiento rápido de un vector de datos.
 
@@ -282,6 +299,7 @@ def particion(arreglo, izquierda, derecha):
 
 
 ## @knitr Item16
+#%%
 arreglo = [5, 1, 2, 1, 1, 3, 5, 1, 5, 1, 99, 231, 234, 12, 121,
            312, 123, 123, 12, 312, 321, 312, 31, 23, 12, 3123, 123, ]
 print("Antes de ordenarlo: ")
@@ -291,6 +309,7 @@ print("Después de ordenarlo: ")
 print(arreglo)
 
 ## @knitr Item17
+#%%
 # Se construye la serie mediante la utilización de datos en parejas, una de las capacidades de Python.
 def fibonacci(n):
     '''
@@ -303,10 +322,12 @@ def fibonacci(n):
     print()
     
 ## @knitr Item18
+#%%
 fibonacci(5)
 fibonacci(100)
 
 ## @knitr Item19
+#%%
 def Fibonacci(n):
   '''
   Serie de Fibonacci
