@@ -42,6 +42,7 @@ def calculos_estadisticos (lista1, valores_diccionario):
 
     mediana_lista = (valor_izq + valor_der)/2
     
+    
     ###CALCULOS PARA OBTENER LA MEDIANA DEL DICCIONARIO MANUALMENTE###
     contador = 0
 
