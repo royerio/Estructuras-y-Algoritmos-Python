@@ -1,2 +1,2 @@
 Tarea #3
-	Partes 1 y 2 completas.
+	Partes 1, 2 y 3 completas.
